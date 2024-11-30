@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Hero from './components/Hero';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import OrderForm from './components/OrderForm';
+import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+import FindUs from './components/FindUs';
+import Gallery from './components/Gallery';
 
 function App() {
   const [menuItems, setMenuItems] = useState([]);
@@ -19,9 +24,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* Pass the menuItems to the Menu and OrderForm components */}
+      <Hero />
       <Menu menuItems={menuItems} />
       <OrderForm menuItems={menuItems} />
+      <Gallery />
+      <Testimonials />
+      <FindUs />
+      <Footer />
     </div>
   );
 }
